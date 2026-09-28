@@ -6,6 +6,8 @@
 services:
   - type: web
     name: day12-agent
+    # CI gọi deploy hook sau khi test xanh, tránh deploy 2 lần
+    autoDeploy: false
     runtime: docker
     dockerfilePath: ./Dockerfile
     plan: free
